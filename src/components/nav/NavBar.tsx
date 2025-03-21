@@ -1,10 +1,10 @@
-import '../styles/nav.css'
+import '../../styles/nav.css'
 import Image from 'next/image';
-import settingsIcon from '../../public/settings.svg';
-import refreshIcon from '../../public/refresh.svg';
-import githubIcon from '../../public/github.svg';
+import settingsIcon from '../../../public/settings.svg';
+import refreshIcon from '../../../public/refresh.svg';
+import githubIcon from '../../../public/github.svg';
 
-export default function Nav() {
+export default function NavBar() {
   return (
     <>
       <nav className="flex flex-row justify-around bg-zinc-800 w-full h-14 nav-bar">
