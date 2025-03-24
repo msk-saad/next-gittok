@@ -2,7 +2,7 @@
 
 @plugin "tailwindcss-animate";
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 @theme inline {
   --color-background: var(--background);
@@ -122,5 +122,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: rgba(1, 4, 9, 1);
   }
 }
