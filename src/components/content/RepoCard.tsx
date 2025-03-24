@@ -74,7 +74,7 @@ export default function RepoCard({ repository }: RepoCardProps) {
 
   return (
     <div className="grid grid-rows-[minmax(0,1fr)_auto_auto] h-full gap-4 sm:gap-6">
-      <div className='bg-white/[0.03] rounded-2xl p-6 sm:p-8 backdrop-blur-xl border border-white/[0.06] shadow-xl flex flex-col min-h-0 hover:bg-white/[0.04] transition-colors'>
+      <div className='rounded-xl p-6 sm:p-8 backdrop-blur-xl border shadow-xl flex flex-col min-h-0'>
         <a href={repository.html_url} target='_blank' className='flex items-center gap-3 mb-4'>
           <img src={repository.owner.avatar_url} alt={repository.owner.login} className='w-8 h-8 rounded-full ring-1 ring-white/[0.06]' />
           <span className='inline-grid'>
@@ -138,7 +138,7 @@ export default function RepoCard({ repository }: RepoCardProps) {
         </div>
       </div>
 
-      <div className='bg-gradient-to-r from-white/[0.03] to-white/[0.02] rounded-2xl p-3 backdrop-blur-xl border border-white/[0.06] shadow-xl'>
+      <div className='bg-gradient-to-r from-white/[0.03] to-white/[0.02] rounded-2xl p-3 backdrop-blur-xl border shadow-xl'>
         <div className='grid grid-cols-3 divide-x divide-white/[0.06]'>
           <div className='flex flex-col items-center justify-center p-2'>
             <Star className='w-4 h-4 text-white/50 mb-1' />
@@ -172,35 +172,17 @@ export default function RepoCard({ repository }: RepoCardProps) {
         </div>
       </div>
 
-      <div className='flex gap-3'>
+      <div className='flex gap-2'>
         <a
           href={repository.html_url}
           target='_blank'
-          className='flex-1 bg-white/[0.05] text-white p-4 rounded-xl 
+          className='flex bg-white/[0.05] text-white p-4 rounded-xl 
             font-medium text-base hover:bg-white/[0.08] transition-all 
-            flex items-center justify-center gap-2 border border-white/[0.1] 
+            gap border  
             hover:border-white/[0.2] shadow-lg backdrop-blur-sm'
         >
           <Star className='w-5 h-5' />
-          Star Repository
         </a>
-        {navigator.share && (
-          <button
-            onClick={() => {
-              navigator;
-              navigator
-                .share({
-                  title: repository.name,
-                  text: repository.description,
-                  url: repository.html_url,
-                })
-                .catch((error) => console.log('Error sharing:', error));
-            }}
-            className='w-14 h-14 flex items-center justify-center bg-white/[0.03] border border-white/[0.06] rounded-xl hover:bg-white/[0.06] transition-colors group'
-          >
-            <Share2 className='w-5 h-5 text-white/70 group-hover:text-white transition-colors' />
-          </button>
-        )}
       </div>
     </div>
   );

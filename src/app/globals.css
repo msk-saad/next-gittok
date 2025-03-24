@@ -122,6 +122,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    background: rgba(1, 4, 9, 1);
+    background: rgba(254, 251, 246, 1);
   }
 }
