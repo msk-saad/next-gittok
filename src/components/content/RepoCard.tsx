@@ -11,8 +11,6 @@ import {
   GitPullRequest,
 } from 'lucide-react';
 
-import Image from 'next/image';
-
 export type License = {
   key: string;
   name: string;
@@ -80,7 +78,7 @@ export default function RepoCard({ repository }: RepoCardProps) {
     <div className="grid grid-rows-[minmax(0,1fr)_auto_auto] h-full gap-4 sm:gap-6">
       <div className='rounded-xl p-6 sm:p-8 backdrop-blur-xl border shadow-xl flex flex-col min-h-0'>
         <a href={repository.html_url} target='_blank' className='flex items-center gap-3 mb-4'>
-          <Image src={repository.owner.avatar_url} alt={repository.owner.login} className='w-8 h-8 rounded-full ring-1 ring-white/[0.06]' />
+          <img src={repository.owner.avatar_url} alt={repository.owner.login} className='w-8 h-8 rounded-full ring-1 ring-white/[0.06]' />
           <span className='inline-grid'>
             <span className='text-xl font-semibold text-white truncate'>
               {repository.name}
