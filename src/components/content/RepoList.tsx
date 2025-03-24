@@ -9,7 +9,7 @@ interface RepoListProps {
 }
 
 
-export default function (props: RepoListProps) {
+export default function RepoList(props: RepoListProps) {
   const {repositories, scrollContainerRef} = props;
   return (
     <div

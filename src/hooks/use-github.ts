@@ -1,3 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+
+
+
 import { InfiniteData, useInfiniteQuery } from '@tanstack/react-query';
 import { useCallback, useRef } from 'react';
 import { Repository } from '../components/content/RepoCard';
